@@ -7,7 +7,7 @@ import ThemeLangToggles from './ThemeLangToggles.vue'
 
 <template>
   <aside
-    class="flex min-h-screen flex-col p-10 pl-60 sticky top-0 self-start"
+    class="flex min-h-screen flex-col p-10 sticky top-0 self-start"
     :style="{
       width: 'var(--sidebar-width)',
       backgroundColor: 'var(--color-bg)',
