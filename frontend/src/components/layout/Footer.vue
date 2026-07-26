@@ -6,9 +6,7 @@ const year = new Date().getFullYear()
 </script>
 
 <template>
-  <footer
-    :style="{ color: 'var(--color-text-secondary)' }"
-  >
+  <footer :style="{ color: 'var(--color-text-secondary)' }">
     <div class="flex flex-col items-center gap-2 text-center">
       <p class="text-xs">
         &copy; {{ year }} &mdash; {{ content.sections.designedBy }}

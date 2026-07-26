@@ -111,10 +111,16 @@ onUnmounted(() => {
   border-right: 1px solid var(--color-border);
 }
 
-.menu-enter-active { transition: opacity 0.25s ease; }
-.menu-leave-active { transition: opacity 0.2s ease; }
+.menu-enter-active {
+  transition: opacity 0.25s ease;
+}
+.menu-leave-active {
+  transition: opacity 0.2s ease;
+}
 .menu-enter-from,
-.menu-leave-to { opacity: 0; }
+.menu-leave-to {
+  opacity: 0;
+}
 
 .menu-enter-active .drawer,
 .menu-leave-active .drawer {

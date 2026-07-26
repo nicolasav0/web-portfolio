@@ -10,9 +10,21 @@
     { "category": "Backend", "items": ["Spring Boot", "Spring Security", "JWT", "OAuth2"] },
     { "category": "Frontend", "items": ["Vue.js", "Pinia", "Axios", "Vite"] },
     { "category": "Bases de Datos", "items": ["PostgreSQL", "MySQL"] },
-    { "category": "DevOps y Herramientas", "items": ["Docker", "Git", "GitHub Actions", "CI/CD (aprendiendo)"] },
+    {
+      "category": "DevOps y Herramientas",
+      "items": ["Docker", "Git", "GitHub Actions", "CI/CD (aprendiendo)"]
+    },
     { "category": "Metodologías", "items": ["Scrum", "Kanban"] },
-    { "category": "Habilidades Blandas", "items": ["Resolución de Problemas", "Autoaprendizaje", "Pensamiento Analítico", "Colaboración en Equipo", "Adaptabilidad"] }
+    {
+      "category": "Habilidades Blandas",
+      "items": [
+        "Resolución de Problemas",
+        "Autoaprendizaje",
+        "Pensamiento Analítico",
+        "Colaboración en Equipo",
+        "Adaptabilidad"
+      ]
+    }
   ],
   "projects": [
     {
