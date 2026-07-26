@@ -1,6 +1,5 @@
 <script setup>
-import { socials } from '@/data/socials'
-
+import { useLocale } from '@/composables/useLocale'
 import {
   Github,
   Linkedin,
@@ -8,6 +7,8 @@ import {
   X,
   Send,
 } from 'lucide-vue-next'
+
+const { content } = useLocale()
 
 const icons = {
   github: Github,
@@ -25,7 +26,7 @@ defineProps({
 <template>
   <div class="flex items-center" :class="compact ? 'gap-3' : 'gap-5'">
     <a
-      v-for="social in socials"
+      v-for="social in content.socials"
       :key="social.id"
       :href="social.url"
       :aria-label="social.name"

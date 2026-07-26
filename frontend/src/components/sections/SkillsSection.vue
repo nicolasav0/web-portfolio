@@ -1,5 +1,7 @@
 <script setup>
-import { skills } from '@/data/skills'
+import { useLocale } from '@/composables/useLocale'
+
+const { content } = useLocale()
 </script>
 
 <template>
@@ -16,12 +18,12 @@ import { skills } from '@/data/skills'
           color: 'var(--color-text-primary)',
         }"
       >
-        Skills
+        {{ content.sections.skills }}
       </h2>
 
       <div class="flex flex-col gap-8">
       <div
-        v-for="group in skills"
+        v-for="group in content.skills"
         :key="group.category"
       >
         <h3

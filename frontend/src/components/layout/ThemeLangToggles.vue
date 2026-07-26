@@ -1,9 +1,16 @@
 <script setup>
 import { Sun } from 'lucide-vue-next'
+import { useLocale } from '@/composables/useLocale'
 
 defineProps({
   compact: Boolean,
 })
+
+const { locale, setLocale } = useLocale()
+
+function toggleLocale() {
+  setLocale(locale.value === 'en' ? 'es' : 'en')
+}
 </script>
 
 <template>
@@ -12,8 +19,9 @@ defineProps({
       class="cursor-pointer font-medium uppercase tracking-[0.25em] transition-all duration-300 hover:-translate-y-1"
       :class="compact ? 'text-[0.625rem]' : 'text-xs'"
       :style="{ color: 'var(--color-text-secondary)' }"
+      @click="toggleLocale"
     >
-      EN
+      {{ locale === 'en' ? 'EN' : 'ES' }}
     </button>
 
     <button
