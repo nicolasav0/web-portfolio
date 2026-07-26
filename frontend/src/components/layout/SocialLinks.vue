@@ -17,12 +17,13 @@ const icons = {
   telegram: Send,
 }
 
+defineProps({
+  compact: Boolean,
+})
 </script>
 
-
 <template>
-  <div class="flex items-center gap-5">
-
+  <div class="flex items-center" :class="compact ? 'gap-3' : 'gap-5'">
     <a
       v-for="social in socials"
       :key="social.id"
@@ -33,14 +34,11 @@ const icons = {
       class="transition-all duration-300 hover:-translate-y-1"
       :style="{ color: 'var(--color-text-secondary)' }"
     >
-
       <component
         :is="icons[social.icon]"
-        :size="22"
+        :size="compact ? 16 : 22"
         :stroke-width="1.75"
       />
-
     </a>
-
   </div>
 </template>
