@@ -30,7 +30,7 @@ const { scrollToSection } = useScrollToSection()
           />
 
           <span
-            class="font-heading text-sm uppercase tracking-[0.25em] transition-all duration-300"
+            class="font-heading text-xs uppercase tracking-[0.25em] transition-all duration-300"
             :style="{
               color:
                 activeSection === item.target
