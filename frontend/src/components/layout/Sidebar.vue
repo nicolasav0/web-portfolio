@@ -2,7 +2,6 @@
 import Profile from './Profile.vue'
 import Navigation from './Navigation.vue'
 import SocialLinks from './SocialLinks.vue'
-import Footer from './Footer.vue'
 </script>
 
 <template>
@@ -20,8 +19,6 @@ import Footer from './Footer.vue'
       <Navigation />
 
       <SocialLinks />
-
-      <Footer />
     </div>
   </aside>
 </template>
