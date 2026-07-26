@@ -6,7 +6,7 @@ import ContactSection from '@/components/sections/ContactSection.vue'
 </script>
 
 <template>
-  <main>
+  <main class="bg-primary text-primary flex min-h-full flex-col gap-32 px-20 py-24">
     <AboutSection />
 
     <SkillsSection />
