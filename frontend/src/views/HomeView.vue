@@ -7,7 +7,7 @@ import Footer from '@/components/layout/Footer.vue'
 </script>
 
 <template>
-  <main class="bg-primary text-primary flex min-h-full flex-col gap-32 px-20 py-24">
+    <main class="bg-primary text-primary flex min-h-full flex-col gap-24 p-10">
     <AboutSection />
 
     <SkillsSection />
