@@ -7,15 +7,13 @@ const { content } = useLocale()
 
 <template>
   <section class="flex flex-col gap-0">
-
     <img
       :src="profileImage"
       :alt="content.profile.fullName"
       class="h-32 w-32 rounded-full object-cover"
-    >
+    />
 
     <div class="flex flex-col gap-2">
-
       <h1
         class="font-heading"
         :style="{
@@ -45,8 +43,6 @@ const { content } = useLocale()
       >
         {{ content.profile.description }}
       </p>
-
     </div>
-
   </section>
 </template>

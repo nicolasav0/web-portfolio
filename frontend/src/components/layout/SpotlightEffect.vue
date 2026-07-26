@@ -12,7 +12,9 @@ function onMouseMove(e) {
 }
 
 function onMouseLeave() {
-  timeout = setTimeout(() => { isVisible.value = false }, 300)
+  timeout = setTimeout(() => {
+    isVisible.value = false
+  }, 300)
 }
 
 onMounted(() => {

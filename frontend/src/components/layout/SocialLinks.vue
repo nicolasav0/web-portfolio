@@ -1,12 +1,6 @@
 <script setup>
 import { useLocale } from '@/composables/useLocale'
-import {
-  Github,
-  Linkedin,
-  Mail,
-  X,
-  Send,
-} from 'lucide-vue-next'
+import { Github, Linkedin, Mail, X, Send } from 'lucide-vue-next'
 
 const { content } = useLocale()
 
@@ -35,11 +29,7 @@ defineProps({
       class="transition-all duration-300 hover:-translate-y-1"
       :style="{ color: 'var(--color-text-secondary)' }"
     >
-      <component
-        :is="icons[social.icon]"
-        :size="compact ? 16 : 22"
-        :stroke-width="1.75"
-      />
+      <component :is="icons[social.icon]" :size="compact ? 16 : 22" :stroke-width="1.75" />
     </a>
   </div>
 </template>

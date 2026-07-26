@@ -5,10 +5,7 @@ const { content } = useLocale()
 </script>
 
 <template>
-  <section
-    id="about"
-    style="scroll-margin-top: 4rem; width: 100%"
-  >
+  <section id="about" style="scroll-margin-top: 4rem; width: 100%">
     <div style="width: 100%; max-width: 40rem; margin: 0 auto">
       <h2
         class="font-heading mb-8"

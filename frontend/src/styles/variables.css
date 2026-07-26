@@ -16,8 +16,7 @@
   color-scheme: dark;
 }
 
-[data-theme="dark"] {
-
+[data-theme='dark'] {
   /* ==========================================================================
      COLORS — Dark
      ========================================================================== */
@@ -25,43 +24,40 @@
   --color-bg: #171625;
   --color-surface: #222037;
 
-  --color-text-primary: #F5F5F7;
-  --color-text-secondary: #A3A0C2;
+  --color-text-primary: #f5f5f7;
+  --color-text-secondary: #a3a0c2;
 
-  --color-brand: #7C6CF5;
+  --color-brand: #7c6cf5;
 
-  --color-border: #32304A;
+  --color-border: #32304a;
 }
 
-[data-theme="light"] {
+[data-theme='light'] {
   color-scheme: light;
 
   /* ==========================================================================
      COLORS — Light
      ========================================================================== */
 
-  --color-bg: #FAFAFA;
-  --color-surface: #FFFFFF;
+  --color-bg: #fafafa;
+  --color-surface: #ffffff;
 
-  --color-text-primary: #1A1A2E;
-  --color-text-secondary: #6B6B80;
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: #6b6b80;
 
-  --color-brand: #7C6CF5;
+  --color-brand: #7c6cf5;
 
-  --color-border: #E2E2EA;
+  --color-border: #e2e2ea;
 }
 
 :root {
-
   /* ==========================================================================
      TYPOGRAPHY
      ========================================================================== */
 
-  --font-heading: "Manrope", sans-serif;
-  --font-body: "Inter", sans-serif;
-  --font-code: "JetBrains Mono", monospace;
-
-
+  --font-heading: 'Manrope', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
 
   /* ==========================================================================
      FONT SIZES
@@ -76,11 +72,9 @@
 
   --text-body-lg: 1.125rem;
   --text-body-md: 1rem;
-  --text-body-sm: .875rem;
+  --text-body-sm: 0.875rem;
 
-  --text-caption: .75rem;
-
-
+  --text-caption: 0.75rem;
 
   /* ==========================================================================
      FONT WEIGHTS
@@ -91,8 +85,6 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-
-
   /* ==========================================================================
      LINE HEIGHT
      ========================================================================== */
@@ -101,15 +93,13 @@
   --line-height-normal: 1.5;
   --line-height-relaxed: 1.75;
 
-
-
   /* ==========================================================================
      SPACING
      ========================================================================== */
 
-  --space-1: .25rem;
-  --space-2: .5rem;
-  --space-3: .75rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
   --space-4: 1rem;
 
   --space-6: 1.5rem;
@@ -118,16 +108,12 @@
   --space-12: 3rem;
   --space-16: 4rem;
 
-
-
   /* ==========================================================================
      LAYOUT
      ========================================================================== */
 
   --sidebar-width: 30rem;
   --content-max-width: 48rem;
-
-
 
   /* ==========================================================================
      BORDER RADIUS
@@ -138,19 +124,15 @@
   --radius-lg: 16px;
   --radius-full: 9999px;
 
-
-
   /* ==========================================================================
      SHADOWS
      ========================================================================== */
 
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, .12);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.12);
 
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, .18);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.18);
 
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, .24);
-
-
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.24);
 
   /* ==========================================================================
      TRANSITIONS
@@ -159,8 +141,6 @@
   --transition-fast: 150ms;
   --transition-normal: 250ms;
   --transition-slow: 400ms;
-
-
 
   /* ==========================================================================
      Z-INDEX

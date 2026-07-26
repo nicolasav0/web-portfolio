@@ -7,7 +7,7 @@ try {
   if (saved === 'light' || saved === 'dark') {
     theme.value = saved
   }
-} catch (e) {
+} catch {
   // localStorage not available
 }
 
@@ -19,7 +19,7 @@ export function useTheme() {
     document.documentElement.dataset.theme = t
     try {
       localStorage.setItem('theme', t)
-    } catch (e) {
+    } catch {
       // localStorage not available
     }
   }

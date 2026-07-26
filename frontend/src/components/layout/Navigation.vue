@@ -12,10 +12,7 @@ const { scrollToSection } = useScrollToSection()
 <template>
   <nav>
     <ul class="flex flex-col gap-3">
-      <li
-        v-for="item in content.navigation"
-        :key="item.id"
-      >
+      <li v-for="item in content.navigation" :key="item.id">
         <button
           class="group flex cursor-pointer items-center gap-2"
           @click="scrollToSection(item.target)"
