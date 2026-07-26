@@ -1,5 +1,8 @@
 <template>
-  <section>
+  <section
+    id="contact"
+    class="min-h-screen"
+  >
     <h2>Contact</h2>
   </section>
 </template>

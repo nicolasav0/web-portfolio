@@ -1,5 +1,8 @@
 <template>
-  <section>
+  <section
+    id="skills"
+    class="min-h-screen"
+  >
     <h2>Skills</h2>
   </section>
 </template>
