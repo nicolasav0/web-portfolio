@@ -5,28 +5,33 @@ import { about } from '@/data/about'
 <template>
   <section
     id="about"
-    class=""
+    style="scroll-margin-top: 4rem; width: 100%"
   >
-    <h2
-      class="font-heading mb-8"
-      :style="{
-        fontSize: 'var(--text-heading-lg)',
-        fontWeight: 'var(--font-weight-bold)',
-        color: 'var(--color-text-primary)',
-      }"
-    >
-      About
-    </h2>
+    <div style="width: 100%; max-width: 40rem; margin: 0 auto">
+      <h2
+        class="font-heading mb-8"
+        :style="{
+          fontSize: 'var(--text-heading-lg)',
+          fontWeight: 'var(--font-weight-bold)',
+          color: 'var(--color-text-primary)',
+        }"
+      >
+        About
+      </h2>
 
-    <p
-      class="max-w-prose leading-relaxed"
-      :style="{
-        fontSize: 'var(--text-body-md)',
-        color: 'var(--color-text-secondary)',
-        lineHeight: 'var(--line-height-relaxed)',
-      }"
-    >
-      {{ about.bio }}
-    </p>
+      <p
+        v-for="(paragraph, i) in about.paragraphs"
+        :key="i"
+        class="leading-relaxed"
+        :style="{
+          fontSize: 'var(--text-body-md)',
+          color: 'var(--color-text-secondary)',
+          lineHeight: 'var(--line-height-relaxed)',
+          marginBottom: i < about.paragraphs.length - 1 ? '1rem' : '0',
+        }"
+      >
+        {{ paragraph }}
+      </p>
+    </div>
   </section>
 </template>

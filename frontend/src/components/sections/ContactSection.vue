@@ -6,20 +6,21 @@ import { Mail, Send, Download } from 'lucide-vue-next'
 <template>
   <section
     id="contact"
-    class=""
+    style="scroll-margin-top: 4rem; width: 100%"
   >
-    <h2
-      class="font-heading mb-12"
-      :style="{
-        fontSize: 'var(--text-heading-lg)',
-        fontWeight: 'var(--font-weight-bold)',
-        color: 'var(--color-text-primary)',
-      }"
-    >
-      Contact
-    </h2>
+    <div style="width: 100%; max-width: 40rem; margin: 0 auto">
+      <h2
+        class="font-heading mb-12"
+        :style="{
+          fontSize: 'var(--text-heading-lg)',
+          fontWeight: 'var(--font-weight-bold)',
+          color: 'var(--color-text-primary)',
+        }"
+      >
+        Contact
+      </h2>
 
-    <div class="flex flex-col gap-6">
+      <div class="flex flex-col gap-6">
       <a
         :href="`mailto:${contact.email}`"
         class="flex items-center gap-3 transition-all duration-300 hover:-translate-y-0.5"
@@ -60,6 +61,7 @@ import { Mail, Send, Download } from 'lucide-vue-next'
         >
           {{ contact.cv.graduation }}
         </p>
+      </div>
       </div>
     </div>
   </section>
