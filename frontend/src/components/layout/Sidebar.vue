@@ -2,6 +2,7 @@
 import Profile from './Profile.vue'
 import Navigation from './Navigation.vue'
 import SocialLinks from './SocialLinks.vue'
+import ThemeLangToggles from './ThemeLangToggles.vue'
 </script>
 
 <template>
@@ -18,7 +19,10 @@ import SocialLinks from './SocialLinks.vue'
 
       <Navigation />
 
-      <SocialLinks />
+      <div class="flex flex-col gap-4">
+        <SocialLinks />
+        <ThemeLangToggles />
+      </div>
     </div>
   </aside>
 </template>
