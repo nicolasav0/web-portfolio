@@ -1,0 +1,12 @@
+node_modules
+dist
+.git
+.gitignore
+README.md
+.vscode
+.editorconfig
+.eslintcache
+.prettierrc.json
+eslint.config.js
+jsconfig.json
+*.md
