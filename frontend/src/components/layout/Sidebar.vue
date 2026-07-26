@@ -7,14 +7,14 @@ import ThemeLangToggles from './ThemeLangToggles.vue'
 
 <template>
   <aside
-    class="flex min-h-screen flex-col p-10 pl-60 sticky top-0 self-start"
+    class="sidebar"
     :style="{
       width: 'var(--sidebar-width)',
       backgroundColor: 'var(--color-bg)',
       borderColor: 'var(--color-border)',
     }"
   >
-    <div class="flex flex-1 flex-col justify-between">
+    <div class="flex flex-1 flex-col justify-between p-10">
       <Profile />
 
       <Navigation />
@@ -26,3 +26,20 @@ import ThemeLangToggles from './ThemeLangToggles.vue'
     </div>
   </aside>
 </template>
+
+<style scoped>
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+}
+
+@media (max-width: 1023px) {
+  .sidebar {
+    display: none;
+  }
+}
+</style>
