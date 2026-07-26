@@ -1,0 +1,74 @@
+{
+  "about": {
+    "paragraphs": [
+      "Soy estudiante de Ingeniería de Sistemas y Computación en la Universidad Nacional de Colombia, Bogotá, actualmente cursando sexto semestre. Hablo español, inglés y estoy aprendiendo francés. Fuera del código, entreno levantamiento de pesas y me apasiona construir cosas y aprender algo nuevo cada día.",
+      "Mi enfoque principal es el desarrollo backend con Java y Spring Boot, construyendo APIs REST y sistemas que resuelven problemas reales. Estoy ampliando mi stack con Spring Security, JWT, Docker y prácticas de CI/CD, y complemento mis proyectos backend con trabajo básico en frontend usando Vue.js. Estoy buscando activamente una pasantía para seguir creciendo como desarrollador y aportar valor a un equipo. Espero graduarme en 2028–2029."
+    ]
+  },
+  "skills": [
+    { "category": "Lenguajes", "items": ["Java", "SQL", "JavaScript", "Kotlin (aprendiendo)"] },
+    { "category": "Backend", "items": ["Spring Boot", "Spring Security", "JWT", "OAuth2"] },
+    { "category": "Frontend", "items": ["Vue.js", "Pinia", "Axios", "Vite"] },
+    { "category": "Bases de Datos", "items": ["PostgreSQL", "MySQL"] },
+    { "category": "DevOps y Herramientas", "items": ["Docker", "Git", "GitHub Actions", "CI/CD (aprendiendo)"] },
+    { "category": "Metodologías", "items": ["Scrum", "Kanban"] },
+    { "category": "Habilidades Blandas", "items": ["Resolución de Problemas", "Autoaprendizaje", "Pensamiento Analítico", "Colaboración en Equipo", "Adaptabilidad"] }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "ParKing",
+      "description": "API REST para gestión de parqueaderos. Sistema completo con autenticación JWT, parqueadero configurable como matriz de celdas, registro de entrada/salida de vehículos, cálculo automático de tarifas y descuentos, generación de facturas y reportes financieros. Arquitectura en capas con Spring Boot y persistencia en PostgreSQL.",
+      "technologies": ["Java", "Spring Boot", "PostgreSQL", "Docker", "JWT"],
+      "github": "https://github.com/UNosProgramadores/project-backend"
+    }
+  ],
+  "contact": {
+    "email": "niaguirrev@unal.edu.co",
+    "telegram": "https://t.me",
+    "cv": {
+      "label": "Descargar CV / Hoja de Vida",
+      "path": "/resume.pdf",
+      "graduation": "Graduación esperada: 2028–2029"
+    }
+  },
+  "footer": {
+    "author": "Nicolás Aguirre Velásquez",
+    "githubUrl": "https://github.com/niko2k7/web-portfolio",
+    "technologies": ["Vue 3", "Tailwind CSS"]
+  },
+  "navigation": [
+    { "id": 1, "label": "Sobre Mí", "target": "about" },
+    { "id": 2, "label": "Habilidades", "target": "skills" },
+    { "id": 3, "label": "Proyectos", "target": "projects" },
+    { "id": 4, "label": "Contacto", "target": "contact" }
+  ],
+  "profile": {
+    "firstName": "Nicolás",
+    "lastName": "Aguirre Velásquez",
+    "fullName": "Nicolás Aguirre Velásquez",
+    "role": "Desarrollador Backend",
+    "tagline": "Construyendo aplicaciones backend escalables.",
+    "description": "Desarrollador backend enfocado en construir aplicaciones escalables con Java, Spring Boot y PostgreSQL.",
+    "location": "Colombia",
+    "email": "niaguirrev@unal.edu.co"
+  },
+  "socials": [
+    { "id": 1, "name": "GitHub", "icon": "github", "url": "https://github.com/niko2k7" },
+    { "id": 2, "name": "LinkedIn", "icon": "linkedin", "url": "https://linkedin.com/in/niko2k7" },
+    { "id": 3, "name": "Email", "icon": "mail", "url": "mailto:niaguirrev@unal.edu.co" },
+    { "id": 4, "name": "X", "icon": "x", "url": "https://x.com" },
+    { "id": 5, "name": "Telegram", "icon": "telegram", "url": "https://t.me" }
+  ],
+  "sections": {
+    "about": "Sobre Mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "source": "Código",
+    "telegram": "Telegram",
+    "menu": "Menú",
+    "designedBy": "Diseñado y Construido por",
+    "builtWith": "Construido con"
+  }
+}

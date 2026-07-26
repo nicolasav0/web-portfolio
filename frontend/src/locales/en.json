@@ -1,0 +1,74 @@
+{
+  "about": {
+    "paragraphs": [
+      "I'm a Systems and Computer Engineering student at Universidad Nacional de Colombia, Bogotá, currently in my sixth semester. I speak Spanish, English, and I'm learning French. Outside of code, I train weightlifting and I'm passionate about building things and learning something new every day.",
+      "My main focus is backend development with Java and Spring Boot, building REST APIs and systems that solve real-world problems. I'm expanding my stack with Spring Security, JWT, Docker, and CI/CD practices, and I complement my backend projects with basic frontend work using Vue.js. I'm actively looking for an internship to keep growing as a developer and bring value to a team. I expect to graduate in 2028–2029."
+    ]
+  },
+  "skills": [
+    { "category": "Languages", "items": ["Java", "SQL", "JavaScript", "Kotlin (learning)"] },
+    { "category": "Backend", "items": ["Spring Boot", "Spring Security", "JWT", "OAuth2"] },
+    { "category": "Frontend", "items": ["Vue.js", "Pinia", "Axios", "Vite"] },
+    { "category": "Databases", "items": ["PostgreSQL", "MySQL"] },
+    { "category": "DevOps & Tools", "items": ["Docker", "Git", "GitHub Actions", "CI/CD (learning)"] },
+    { "category": "Methodologies", "items": ["Scrum", "Kanban"] },
+    { "category": "Soft Skills", "items": ["Problem Solving", "Self-learning", "Analytical Thinking", "Team Collaboration", "Adaptability"] }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "ParKing",
+      "description": "REST API for parking lot management. Complete system with JWT authentication, configurable parking lot as a cell matrix, vehicle entry/exit logging, automatic rate and discount calculation, invoice generation, and financial reports. Layered architecture with Spring Boot and PostgreSQL persistence.",
+      "technologies": ["Java", "Spring Boot", "PostgreSQL", "Docker", "JWT"],
+      "github": "https://github.com/UNosProgramadores/project-backend"
+    }
+  ],
+  "contact": {
+    "email": "niaguirrev@unal.edu.co",
+    "telegram": "https://t.me",
+    "cv": {
+      "label": "Download CV / Resume",
+      "path": "/resume.pdf",
+      "graduation": "Expected graduation: 2028–2029"
+    }
+  },
+  "footer": {
+    "author": "Nicolás Aguirre Velásquez",
+    "githubUrl": "https://github.com/niko2k7/web-portfolio",
+    "technologies": ["Vue 3", "Tailwind CSS"]
+  },
+  "navigation": [
+    { "id": 1, "label": "About", "target": "about" },
+    { "id": 2, "label": "Skills", "target": "skills" },
+    { "id": 3, "label": "Projects", "target": "projects" },
+    { "id": 4, "label": "Contact", "target": "contact" }
+  ],
+  "profile": {
+    "firstName": "Nicolás",
+    "lastName": "Aguirre Velásquez",
+    "fullName": "Nicolás Aguirre Velásquez",
+    "role": "Backend Developer",
+    "tagline": "Building scalable backend applications.",
+    "description": "Backend developer focused on building scalable applications with Java, Spring Boot and PostgreSQL.",
+    "location": "Colombia",
+    "email": "niaguirrev@unal.edu.co"
+  },
+  "socials": [
+    { "id": 1, "name": "GitHub", "icon": "github", "url": "https://github.com/niko2k7" },
+    { "id": 2, "name": "LinkedIn", "icon": "linkedin", "url": "https://linkedin.com/in/niko2k7" },
+    { "id": 3, "name": "Email", "icon": "mail", "url": "mailto:niaguirrev@unal.edu.co" },
+    { "id": 4, "name": "X", "icon": "x", "url": "https://x.com" },
+    { "id": 5, "name": "Telegram", "icon": "telegram", "url": "https://t.me" }
+  ],
+  "sections": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "source": "Source",
+    "telegram": "Telegram",
+    "menu": "Menu",
+    "designedBy": "Designed & Built by",
+    "builtWith": "Built with"
+  }
+}

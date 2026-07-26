@@ -1,7 +1,9 @@
 <script setup>
-import { navigation } from '@/data/navigation'
+import { useLocale } from '@/composables/useLocale'
 import { useActiveSection } from '@/composables/useActiveSection'
 import { useScrollToSection } from '@/composables/useScrollToSection'
+
+const { content } = useLocale()
 
 const { activeSection } = useActiveSection()
 const { scrollToSection } = useScrollToSection()
@@ -11,7 +13,7 @@ const { scrollToSection } = useScrollToSection()
   <nav>
     <ul class="flex flex-col gap-3">
       <li
-        v-for="item in navigation"
+        v-for="item in content.navigation"
         :key="item.id"
       >
         <button

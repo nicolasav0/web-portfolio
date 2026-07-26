@@ -15,11 +15,6 @@ import SocialLinks from '@/components/layout/SocialLinks.vue'
       <SocialLinks />
     </div>
 
-    <div class="flex flex-col gap-4 lg:hidden">
-      <Profile />
-      <SocialLinks />
-    </div>
-
     <div class="flex flex-col items-center gap-24">
       <AboutSection />
 

@@ -1,7 +1,8 @@
 <script setup>
-import { profile } from '@/data/profile'
-
+import { useLocale } from '@/composables/useLocale'
 import profileImage from '@/assets/images/profile-placeholder.png'
+
+const { content } = useLocale()
 </script>
 
 <template>
@@ -9,7 +10,7 @@ import profileImage from '@/assets/images/profile-placeholder.png'
 
     <img
       :src="profileImage"
-      :alt="profile.fullName"
+      :alt="content.profile.fullName"
       class="h-32 w-32 rounded-full object-cover"
     >
 
@@ -23,7 +24,7 @@ import profileImage from '@/assets/images/profile-placeholder.png'
           color: 'var(--color-text-primary)',
         }"
       >
-        {{ profile.fullName }}
+        {{ content.profile.fullName }}
       </h1>
 
       <h2
@@ -33,7 +34,7 @@ import profileImage from '@/assets/images/profile-placeholder.png'
           color: 'var(--color-brand)',
         }"
       >
-        {{ profile.role }}
+        {{ content.profile.role }}
       </h2>
 
       <p
@@ -42,7 +43,7 @@ import profileImage from '@/assets/images/profile-placeholder.png'
           lineHeight: 'var(--line-height-relaxed)',
         }"
       >
-        {{ profile.description }}
+        {{ content.profile.description }}
       </p>
 
     </div>

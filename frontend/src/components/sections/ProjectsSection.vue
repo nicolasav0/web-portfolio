@@ -1,6 +1,8 @@
 <script setup>
-import { projects } from '@/data/projects'
+import { useLocale } from '@/composables/useLocale'
 import { Github, ExternalLink } from 'lucide-vue-next'
+
+const { content } = useLocale()
 </script>
 
 <template>
@@ -14,12 +16,12 @@ import { Github, ExternalLink } from 'lucide-vue-next'
           color: 'var(--color-text-primary)',
         }"
       >
-        Projects
+        {{ content.sections.projects }}
       </h2>
 
       <div class="flex flex-col gap-6">
       <div
-        v-for="project in projects"
+        v-for="project in content.projects"
         :key="project.id"
         class="group flex flex-col gap-4 rounded-md p-6 transition-all duration-300 hover:-translate-y-0.5"
         :style="{
@@ -68,7 +70,7 @@ import { Github, ExternalLink } from 'lucide-vue-next'
             :style="{ color: 'var(--color-text-secondary)' }"
           >
             <Github :size="18" :stroke-width="1.75" />
-            Source
+            {{ content.sections.source }}
           </a>
         </div>
       </div>

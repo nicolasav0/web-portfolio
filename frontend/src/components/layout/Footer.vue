@@ -1,6 +1,7 @@
 <script setup>
-import { footer } from '@/data/footer'
+import { useLocale } from '@/composables/useLocale'
 
+const { content } = useLocale()
 const year = new Date().getFullYear()
 </script>
 
@@ -10,9 +11,9 @@ const year = new Date().getFullYear()
   >
     <div class="flex flex-col items-center gap-2 text-center">
       <p class="text-xs">
-        &copy; {{ year }} &mdash; Designed &amp; Built by
+        &copy; {{ year }} &mdash; {{ content.sections.designedBy }}
         <a
-          :href="footer.githubUrl"
+          :href="content.footer.githubUrl"
           target="_blank"
           rel="noopener noreferrer"
           class="hover:underline"
@@ -21,12 +22,12 @@ const year = new Date().getFullYear()
             fontWeight: 'var(--font-weight-medium)',
           }"
         >
-          {{ footer.author }}
+          {{ content.footer.author }}
         </a>
       </p>
 
       <p class="text-xs">
-        Built with {{ footer.technologies.join(' &amp; ') }}
+        {{ content.sections.builtWith }} {{ content.footer.technologies.join(' &amp; ') }}
       </p>
     </div>
   </footer>

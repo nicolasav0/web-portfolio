@@ -1,9 +1,11 @@
 <script setup>
 import { onMounted, onUnmounted } from 'vue'
 import { X } from 'lucide-vue-next'
-import { navigation } from '@/data/navigation'
+import { useLocale } from '@/composables/useLocale'
 import { useActiveSection } from '@/composables/useActiveSection'
 import { useScrollToSection } from '@/composables/useScrollToSection'
+
+const { content } = useLocale()
 
 defineProps({
   open: Boolean,
@@ -41,7 +43,7 @@ onUnmounted(() => {
             class="text-xs font-medium uppercase tracking-[0.25em]"
             :style="{ color: 'var(--color-text-primary)' }"
           >
-            Menu
+            {{ content.sections.menu }}
           </span>
 
           <button
@@ -55,7 +57,7 @@ onUnmounted(() => {
 
         <nav class="mt-12 flex flex-1 flex-col gap-4">
           <button
-            v-for="item in navigation"
+            v-for="item in content.navigation"
             :key="item.id"
             class="group flex cursor-pointer items-center gap-3"
             @click="onNavClick(item.target)"

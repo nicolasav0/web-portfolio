@@ -1,5 +1,7 @@
 <script setup>
-import { about } from '@/data/about'
+import { useLocale } from '@/composables/useLocale'
+
+const { content } = useLocale()
 </script>
 
 <template>
@@ -16,18 +18,18 @@ import { about } from '@/data/about'
           color: 'var(--color-text-primary)',
         }"
       >
-        About
+        {{ content.sections.about }}
       </h2>
 
       <p
-        v-for="(paragraph, i) in about.paragraphs"
+        v-for="(paragraph, i) in content.about.paragraphs"
         :key="i"
         class="leading-relaxed"
         :style="{
           fontSize: 'var(--text-body-md)',
           color: 'var(--color-text-secondary)',
           lineHeight: 'var(--line-height-relaxed)',
-          marginBottom: i < about.paragraphs.length - 1 ? '1rem' : '0',
+          marginBottom: i < content.about.paragraphs.length - 1 ? '1rem' : '0',
         }"
       >
         {{ paragraph }}
