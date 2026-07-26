@@ -18,15 +18,15 @@
      COLORS
      ========================================================================== */
 
-  --color-bg: #0F172A;
-  --color-surface: #1E293B;
+  --color-bg: #171625;
+  --color-surface: #222037;
 
-  --color-text-primary: #F8FAFC;
-  --color-text-secondary: #94A3B8;
+  --color-text-primary: #F5F5F7;
+  --color-text-secondary: #A3A0C2;
 
-  --color-brand: #38BDF8;
+  --color-brand: #7C6CF5;
 
-  --color-border: #334155;
+  --color-border: #32304A;
 
 
 
@@ -74,7 +74,7 @@
      LINE HEIGHT
      ========================================================================== */
 
-  --line-height-tight: 1.2;
+  --line-height-tight: 1.05;
   --line-height-normal: 1.5;
   --line-height-relaxed: 1.75;
 
@@ -101,7 +101,7 @@
      LAYOUT
      ========================================================================== */
 
-  --sidebar-width: 28rem;
+  --sidebar-width: 30rem;
   --content-max-width: 48rem;
 
 

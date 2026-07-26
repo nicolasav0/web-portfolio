@@ -5,7 +5,7 @@ import profileImage from '@/assets/images/profile-placeholder.png'
 </script>
 
 <template>
-  <section class="flex flex-col gap-8">
+  <section class="flex flex-col gap-0">
 
     <img
       :src="profileImage"

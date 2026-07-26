@@ -7,19 +7,23 @@ import Footer from './Footer.vue'
 
 <template>
   <aside
-    class="flex h-screen flex-col justify-between border-r p-10"
+    class="flex h-screen flex-col border-r p-10"
     :style="{
       width: 'var(--sidebar-width)',
       backgroundColor: 'var(--color-bg)',
       borderColor: 'var(--color-border)',
     }"
   >
-    <Profile />
+    <div class="flex flex-1 flex-col justify-between">
+      <Profile />
 
-    <Navigation />
+      <Navigation />
 
-    <SocialLinks />
+      <div class="flex justify-center">
+        <SocialLinks />
+      </div>
 
-    <Footer />
+      <Footer />
+    </div>
   </aside>
 </template>

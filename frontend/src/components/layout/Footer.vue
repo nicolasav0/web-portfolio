@@ -12,7 +12,7 @@ import { footer } from '@/data/footer'
     </p>
 
     <p
-      class="font-heading"
+      class="text-xs"
       :style="{
         color: 'var(--color-text-primary)',
         fontWeight: 'var(--font-weight-medium)',
