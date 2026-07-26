@@ -5,8 +5,8 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
+  <SpotlightEffect />
   <div class="flex">
-    <SpotlightEffect />
     <Sidebar />
 
     <main class="flex-1">
