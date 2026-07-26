@@ -10,7 +10,7 @@ export const profile = {
   tagline: 'Building scalable backend applications.',
 
   description:
-    'Passionate about backend development, software architecture, and building scalable applications using Java, Spring Boot, PostgreSQL, and modern development practices.',
+    'Backend developer focused on building scalable applications with Java, Spring Boot and PostgreSQL.',
 
   location: 'Colombia',
 
