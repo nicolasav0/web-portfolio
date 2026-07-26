@@ -5,12 +5,16 @@ import {
   Github,
   Linkedin,
   Mail,
+  X,
+  Send,
 } from 'lucide-vue-next'
 
 const icons = {
   github: Github,
   linkedin: Linkedin,
   mail: Mail,
+  x: X,
+  telegram: Send,
 }
 
 </script>
