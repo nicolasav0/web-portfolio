@@ -1,40 +1,47 @@
 <script setup>
 import { navigation } from '@/data/navigation'
+import { useActiveSection } from '@/composables/useActiveSection'
+import { useScrollToSection } from '@/composables/useScrollToSection'
 
-function scrollToSection(sectionId) {
-  document.getElementById(sectionId)?.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',
-  })
-}
+const { activeSection } = useActiveSection()
+const { scrollToSection } = useScrollToSection()
 </script>
 
 <template>
   <nav>
     <ul class="flex flex-col gap-6">
-
       <li
         v-for="item in navigation"
         :key="item.id"
       >
         <button
-          class="group flex cursor-pointer items-center gap-4 transition-all duration-300"
+          class="group flex cursor-pointer items-center gap-4"
           @click="scrollToSection(item.target)"
         >
-
           <span
-            class="bg-secondary group-hover:bg-primary h-px w-8 transition-all duration-300 group-hover:w-16"
+            class="h-px transition-all duration-300"
+            :style="{
+              width: activeSection === item.target ? '4rem' : '2rem',
+              backgroundColor:
+                activeSection === item.target
+                  ? 'var(--color-text-primary)'
+                  : 'var(--color-text-secondary)',
+            }"
           />
 
           <span
-            class="text-secondary group-hover:text-primary font-heading text-sm uppercase tracking-[0.25em] transition-colors duration-300"
+            class="font-heading text-sm uppercase tracking-[0.25em] transition-all duration-300"
+            :style="{
+              color:
+                activeSection === item.target
+                  ? 'var(--color-text-primary)'
+                  : 'var(--color-text-secondary)',
+            }"
           >
             {{ item.label }}
           </span>
-
         </button>
       </li>
-
     </ul>
   </nav>
 </template>
