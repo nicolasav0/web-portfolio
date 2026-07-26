@@ -1,3 +1,28 @@
+<script setup>
+import { footer } from '@/data/footer'
+</script>
+
 <template>
-  <div>Footer</div>
+  <footer
+    class="flex flex-col gap-2"
+    :style="{ color: 'var(--color-text-secondary)' }"
+  >
+    <p class="text-xs">
+      Designed &amp; Built by
+    </p>
+
+    <p
+      class="font-heading"
+      :style="{
+        color: 'var(--color-text-primary)',
+        fontWeight: 'var(--font-weight-medium)',
+      }"
+    >
+      {{ footer.author }}
+    </p>
+
+    <p class="text-xs">
+      {{ footer.technologies.join(' • ') }}
+    </p>
+  </footer>
 </template>
