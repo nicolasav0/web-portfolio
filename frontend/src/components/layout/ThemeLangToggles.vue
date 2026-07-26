@@ -1,12 +1,14 @@
 <script setup>
-import { Sun } from 'lucide-vue-next'
+import { Sun, Moon } from 'lucide-vue-next'
 import { useLocale } from '@/composables/useLocale'
+import { useTheme } from '@/composables/useTheme'
 
 defineProps({
   compact: Boolean,
 })
 
 const { locale, setLocale } = useLocale()
+const { theme, toggleTheme } = useTheme()
 
 function toggleLocale() {
   setLocale(locale.value === 'en' ? 'es' : 'en')
@@ -27,8 +29,13 @@ function toggleLocale() {
     <button
       class="cursor-pointer transition-all duration-300 hover:-translate-y-1"
       :style="{ color: 'var(--color-text-secondary)' }"
+      @click="toggleTheme"
     >
-      <Sun :size="compact ? 14 : 18" :stroke-width="1.75" />
+      <component
+        :is="theme === 'dark' ? Sun : Moon"
+        :size="compact ? 14 : 18"
+        :stroke-width="1.75"
+      />
     </button>
   </div>
 </template>
