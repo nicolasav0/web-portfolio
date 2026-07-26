@@ -5,20 +5,21 @@ import { skills } from '@/data/skills'
 <template>
   <section
     id="skills"
-    class=""
+    style="scroll-margin-top: 4rem; width: 100%"
   >
-    <h2
-      class="font-heading mb-12"
-      :style="{
-        fontSize: 'var(--text-heading-lg)',
-        fontWeight: 'var(--font-weight-bold)',
-        color: 'var(--color-text-primary)',
-      }"
-    >
-      Skills
-    </h2>
+    <div style="width: 100%; max-width: 40rem; margin: 0 auto">
+      <h2
+        class="font-heading mb-12"
+        :style="{
+          fontSize: 'var(--text-heading-lg)',
+          fontWeight: 'var(--font-weight-bold)',
+          color: 'var(--color-text-primary)',
+        }"
+      >
+        Skills
+      </h2>
 
-    <div class="flex flex-col gap-8">
+      <div class="flex flex-col gap-8">
       <div
         v-for="group in skills"
         :key="group.category"
@@ -44,6 +45,7 @@ import { skills } from '@/data/skills'
             {{ item }}
           </span>
         </div>
+      </div>
       </div>
     </div>
   </section>
