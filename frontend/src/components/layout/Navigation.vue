@@ -9,19 +9,19 @@ const { scrollToSection } = useScrollToSection()
 
 <template>
   <nav>
-    <ul class="flex flex-col gap-6">
+    <ul class="flex flex-col gap-3">
       <li
         v-for="item in navigation"
         :key="item.id"
       >
         <button
-          class="group flex cursor-pointer items-center gap-4"
+          class="group flex cursor-pointer items-center gap-2"
           @click="scrollToSection(item.target)"
         >
           <span
             class="h-px transition-all duration-300"
             :style="{
-              width: activeSection === item.target ? '4rem' : '2rem',
+              width: activeSection === item.target ? '5rem' : '2rem',
               backgroundColor:
                 activeSection === item.target
                   ? 'var(--color-text-primary)'
