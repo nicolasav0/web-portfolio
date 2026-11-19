@@ -7,7 +7,7 @@ import ThemeLangToggles from './ThemeLangToggles.vue'
 
 <template>
   <aside class="sidebar">
-    <div class="flex flex-1 flex-col gap-8 p-5 md:p-10 lg:justify-between">
+    <div class="flex flex-1 flex-col gap-6 p-5 md:p-10 lg:justify-between">
       <Profile />
 
       <div class="hidden lg:block">

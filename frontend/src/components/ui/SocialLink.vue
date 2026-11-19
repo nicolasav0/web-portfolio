@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue'
-import { Github, Linkedin, Mail, X, Send } from 'lucide-vue-next'
+import { Github, Linkedin, Mail, Send } from 'lucide-vue-next'
 
 const props = defineProps({
   social: {
@@ -17,7 +17,6 @@ const icons = {
   github: Github,
   linkedin: Linkedin,
   mail: Mail,
-  x: X,
   telegram: Send,
 }
 

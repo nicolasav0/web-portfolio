@@ -16,7 +16,7 @@ defineProps({
 
 <template>
   <article
-    class="flex flex-col gap-4 rounded-md border border-primary bg-surface p-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md focus-within:border-[var(--color-brand)]"
+    class="flex flex-col gap-4 rounded-md border border-primary bg-surface p-6 transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-md focus-within:border-[var(--color-brand)]"
   >
     <h3 class="font-heading text-xl font-semibold text-primary">
       {{ project.title }}
