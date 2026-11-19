@@ -30,7 +30,7 @@ const isExternal = computed(() => /^https?:/i.test(props.social.url))
     :aria-label="social.name"
     :target="isExternal ? '_blank' : undefined"
     :rel="isExternal ? 'noopener noreferrer' : undefined"
-    class="rounded-sm text-secondary transition-all duration-300 hover:-translate-y-1 hover:text-[var(--color-text-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]"
+    class="inline-flex min-h-11 min-w-11 items-center justify-center rounded-sm text-secondary transition-interactive hover:-translate-y-1 hover:text-[var(--color-text-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]"
   >
     <component :is="icon" :size="compact ? 16 : 22" :stroke-width="1.75" aria-hidden="true" />
   </a>

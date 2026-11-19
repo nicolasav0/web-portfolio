@@ -2,6 +2,7 @@
 import { ArrowRight, Download } from 'lucide-vue-next'
 import { useLocale } from '@/composables/useLocale'
 import { useScrollToSection } from '@/composables/useScrollToSection'
+import ThemeLangToggles from './ThemeLangToggles.vue'
 import profileImage from '@/assets/images/profile-placeholder.png'
 
 const { content } = useLocale()
@@ -11,28 +12,38 @@ const { scrollToSection } = useScrollToSection()
 <template>
   <section class="flex flex-col gap-5" aria-labelledby="profile-name">
     <div class="flex flex-col gap-4">
-      <p
-        class="inline-flex w-fit items-center gap-2 rounded-full border border-primary bg-surface px-3 py-1 text-xs font-medium text-secondary"
-      >
-        <span class="relative flex h-2 w-2" aria-hidden="true">
-          <span
-            class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--color-brand)] opacity-60 motion-reduce:animate-none"
-          />
-          <span class="relative inline-flex h-2 w-2 rounded-full bg-[var(--color-brand-text)]" />
-        </span>
-        {{ content.profile.availability }}
-      </p>
+      <div class="flex items-start justify-between">
+        <div class="relative w-fit">
+          <div class="rounded-full bg-surface p-1 ring-1 ring-[var(--color-border)]">
+            <img
+              :src="profileImage"
+              :alt="content.profile.fullName"
+              width="128"
+              height="128"
+              loading="eager"
+              decoding="async"
+              class="h-32 w-32 rounded-full object-cover"
+            />
+          </div>
 
-      <div class="w-fit rounded-full bg-surface p-1 ring-1 ring-[var(--color-border)]">
-        <img
-          :src="profileImage"
-          :alt="content.profile.fullName"
-          width="128"
-          height="128"
-          loading="eager"
-          decoding="async"
-          class="h-32 w-32 rounded-full object-cover"
-        />
+          <p
+            class="absolute bottom-0 left-0 inline-flex w-max max-w-56 items-center gap-2 rounded-full border border-primary bg-surface px-3 py-1 text-xs font-medium text-secondary shadow-sm"
+          >
+            <span class="relative flex h-2 w-2" aria-hidden="true">
+              <span
+                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--color-brand)] opacity-60 motion-reduce:animate-none"
+              />
+              <span
+                class="relative inline-flex h-2 w-2 rounded-full bg-[var(--color-brand-text)]"
+              />
+            </span>
+            {{ content.profile.availability }}
+          </p>
+        </div>
+
+        <div class="hidden pt-1 lg:block">
+          <ThemeLangToggles />
+        </div>
       </div>
     </div>
 

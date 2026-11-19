@@ -8,12 +8,17 @@ const { content } = useLocale()
 
 <template>
   <SectionShell id="projects" :title="content.sections.projects">
-    <div class="flex flex-col gap-6">
+    <div class="grid gap-6 md:grid-cols-2">
       <ProjectCard
         v-for="project in content.projects"
         :key="project.id"
         :project="project"
         :source-label="content.sections.source"
+        :source-aria-label="content.sections.sourceAriaLabel"
+        :source-aria-suffix="content.sections.sourceAriaSuffix"
+        :demo-label="content.sections.demo"
+        :demo-aria-label="content.sections.demoAriaLabel"
+        :featured-label="content.sections.featured"
       />
     </div>
   </SectionShell>

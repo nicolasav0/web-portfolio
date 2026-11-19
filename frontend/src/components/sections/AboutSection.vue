@@ -7,7 +7,7 @@ const { content } = useLocale()
 
 <template>
   <SectionShell id="about" :title="content.sections.about">
-    <div class="space-y-4">
+    <div class="flex flex-col gap-6">
       <p
         v-for="(paragraph, i) in content.about.paragraphs"
         :key="i"

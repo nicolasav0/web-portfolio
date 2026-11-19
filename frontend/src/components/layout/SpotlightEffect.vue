@@ -4,6 +4,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const spotlight = ref({ x: 0, y: 0 })
 const isVisible = ref(false)
 let timeout
+let spotlightEnabled = false
 
 function onMouseMove(e) {
   spotlight.value = { x: e.clientX, y: e.clientY }
@@ -18,11 +19,17 @@ function onMouseLeave() {
 }
 
 onMounted(() => {
+  spotlightEnabled = !window.matchMedia('(pointer: coarse), (prefers-reduced-motion: reduce)')
+    .matches
+  if (!spotlightEnabled) return
+
   window.addEventListener('mousemove', onMouseMove)
   document.addEventListener('mouseleave', onMouseLeave)
 })
 
 onUnmounted(() => {
+  if (!spotlightEnabled) return
+
   window.removeEventListener('mousemove', onMouseMove)
   document.removeEventListener('mouseleave', onMouseLeave)
   clearTimeout(timeout)

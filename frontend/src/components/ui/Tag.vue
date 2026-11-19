@@ -21,13 +21,17 @@ defineProps({
     <li
       v-for="item in items"
       :key="item"
-      class="rounded-md border border-primary text-secondary"
+      class="inline-flex items-center gap-2 rounded-md border border-primary text-secondary"
       :class="[
         compact ? 'px-3 py-1 text-xs' : 'px-3 py-1.5 text-sm',
         variant === 'base' ? 'bg-primary' : 'bg-surface',
       ]"
     >
-      {{ item }}
+      <span
+        class="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-brand-text)]"
+        aria-hidden="true"
+      />
+      <span>{{ item }}</span>
     </li>
   </ul>
 </template>

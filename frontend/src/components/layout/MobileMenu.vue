@@ -99,8 +99,8 @@ function deactivateMenu() {
 }
 
 function onNavClick(target) {
-  scrollToSection(target)
   emit('close')
+  nextTick(() => scrollToSection(target))
 }
 
 watch(
@@ -158,7 +158,7 @@ onBeforeUnmount(() => {
             :key="item.id"
             :href="`#${item.target}`"
             :aria-current="activeSection === item.target ? 'location' : undefined"
-            class="group flex w-fit items-center gap-3 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--color-bg)]"
+            class="group flex min-h-11 w-fit items-center gap-3 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--color-bg)]"
             @click.prevent="onNavClick(item.target)"
           >
             <span
@@ -199,10 +199,11 @@ onBeforeUnmount(() => {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 280px;
+  width: min(280px, 85vw);
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
+  padding: max(1.5rem, env(safe-area-inset-top)) max(1.5rem, env(safe-area-inset-right))
+    max(1.5rem, env(safe-area-inset-bottom)) max(1.5rem, env(safe-area-inset-left));
   background-color: var(--color-bg);
   border-right: 1px solid var(--color-border);
 }

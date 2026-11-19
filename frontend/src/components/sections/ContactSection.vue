@@ -79,13 +79,7 @@ onBeforeUnmount(() => clearTimeout(copyTimeout))
     <div class="rounded-lg border border-primary bg-surface p-6 shadow-sm md:p-8">
       <div class="flex flex-col gap-6">
         <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div class="flex min-w-0 items-center gap-3">
-            <span
-              class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-brand-text"
-            >
-              <Mail :size="20" :stroke-width="1.75" aria-hidden="true" />
-            </span>
-
+          <div class="flex min-w-0 items-center">
             <div class="flex min-w-0 flex-col gap-1">
               <span class="text-xs font-medium tracking-[0.2em] text-secondary uppercase">
                 {{ content.contact.emailHeading }}
@@ -102,49 +96,33 @@ onBeforeUnmount(() => clearTimeout(copyTimeout))
             </div>
           </div>
 
-          <button
-            type="button"
-            :aria-label="copyLabel"
-            class="inline-flex w-full shrink-0 items-center justify-center gap-2 rounded-md border border-primary bg-primary px-4 py-2 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--color-brand)] hover:text-[var(--color-brand-text)] focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-surface)] focus-visible:outline-none sm:w-auto sm:min-w-[9rem]"
-            :class="copyState === 'copied' ? 'text-brand-text' : 'text-secondary'"
-            @click="copyEmail"
-          >
-            <component
-              :is="copyState === 'copied' ? Check : Copy"
-              :size="16"
-              :stroke-width="1.75"
-              aria-hidden="true"
-            />
-            {{ copyLabel }}
-          </button>
+          <div class="flex shrink-0 items-center gap-2">
+            <span
+              class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-brand-text"
+            >
+              <Mail :size="20" :stroke-width="1.75" aria-hidden="true" />
+            </span>
+
+            <button
+              type="button"
+              :aria-label="copyLabel"
+              class="inline-flex w-full shrink-0 items-center justify-center gap-2 rounded-md border border-primary bg-primary px-4 py-2 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--color-brand)] hover:text-[var(--color-brand-text)] focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-surface)] focus-visible:outline-none sm:w-auto sm:min-w-[9rem]"
+              :class="copyState === 'copied' ? 'text-brand-text' : 'text-secondary'"
+              @click="copyEmail"
+            >
+              <component
+                :is="copyState === 'copied' ? Check : Copy"
+                :size="16"
+                :stroke-width="1.75"
+                aria-hidden="true"
+              />
+              {{ copyLabel }}
+            </button>
+          </div>
 
           <span class="sr-only" role="status" aria-live="polite" aria-atomic="true">
             {{ copyState === 'idle' ? '' : copyLabel }}
           </span>
-        </div>
-
-        <div
-          class="flex flex-col gap-3 border-t border-primary pt-6 sm:flex-row sm:items-center sm:justify-between"
-        >
-          <div class="flex flex-col gap-1">
-            <span class="text-xs font-medium tracking-[0.2em] text-secondary uppercase">
-              {{ content.contact.cvHeading }}
-            </span>
-
-            <span class="text-sm text-secondary">
-              {{ content.contact.cv.graduation }}
-            </span>
-          </div>
-
-          <a
-            :href="content.contact.cv.path"
-            :aria-label="content.contact.cv.ariaLabel"
-            download
-            class="inline-flex w-full items-center justify-center gap-2 rounded-md bg-[var(--color-brand-text)] px-5 py-2.5 text-sm font-semibold text-[var(--color-bg)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--color-surface)] focus-visible:outline-none sm:w-auto"
-          >
-            <Download :size="18" :stroke-width="1.75" aria-hidden="true" />
-            {{ content.contact.cv.label }}
-          </a>
         </div>
 
         <div class="flex flex-col gap-3 border-t border-primary pt-6">
@@ -171,6 +149,30 @@ onBeforeUnmount(() => clearTimeout(copyTimeout))
               </a>
             </li>
           </ul>
+        </div>
+
+        <div
+          class="flex flex-col gap-3 border-t border-primary pt-6 sm:flex-row sm:items-center sm:justify-between"
+        >
+          <div class="flex flex-col gap-1">
+            <span class="text-xs font-medium tracking-[0.2em] text-secondary uppercase">
+              {{ content.contact.cvHeading }}
+            </span>
+
+            <span class="text-sm text-secondary">
+              {{ content.contact.cv.graduation }}
+            </span>
+          </div>
+
+          <a
+            :href="content.contact.cv.path"
+            :aria-label="content.contact.cv.ariaLabel"
+            download
+            class="inline-flex w-full items-center justify-center gap-2 rounded-md bg-[var(--color-brand-text)] px-5 py-2.5 text-sm font-semibold text-[var(--color-bg)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--color-surface)] focus-visible:outline-none sm:w-auto"
+          >
+            <Download :size="18" :stroke-width="1.75" aria-hidden="true" />
+            {{ content.contact.cv.label }}
+          </a>
         </div>
       </div>
     </div>

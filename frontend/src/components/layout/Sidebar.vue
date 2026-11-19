@@ -2,7 +2,6 @@
 import Profile from './Profile.vue'
 import Navigation from './Navigation.vue'
 import SocialLinks from './SocialLinks.vue'
-import ThemeLangToggles from './ThemeLangToggles.vue'
 </script>
 
 <template>
@@ -16,10 +15,6 @@ import ThemeLangToggles from './ThemeLangToggles.vue'
 
       <div class="flex flex-col gap-4">
         <SocialLinks />
-
-        <div class="hidden lg:block">
-          <ThemeLangToggles />
-        </div>
       </div>
     </div>
   </aside>

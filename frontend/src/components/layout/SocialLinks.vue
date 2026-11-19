@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex items-center" :class="compact ? 'gap-3' : 'gap-5'">
+  <div class="flex w-full items-center justify-start" :class="compact ? 'gap-3' : 'gap-5'">
     <SocialLink
       v-for="social in content.socials"
       :key="social.id"

@@ -21,7 +21,7 @@ function toggleLocale() {
       type="button"
       :aria-label="content.sections.toggleLanguage"
       :aria-pressed="locale === 'es'"
-      class="cursor-pointer rounded-sm font-medium uppercase tracking-[0.25em] text-secondary transition-all duration-300 hover:-translate-y-1 hover:text-[var(--color-text-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]"
+      class="inline-flex min-h-11 min-w-11 cursor-pointer items-center justify-center rounded-sm px-2 font-medium uppercase tracking-[0.25em] text-secondary transition-colors duration-200 hover:text-[var(--color-text-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]"
       :class="compact ? 'text-[0.625rem]' : 'text-xs'"
       @click="toggleLocale"
     >
@@ -32,7 +32,7 @@ function toggleLocale() {
       type="button"
       :aria-label="content.sections.toggleTheme"
       :aria-pressed="theme === 'dark'"
-      class="cursor-pointer rounded-sm text-secondary transition-all duration-300 hover:-translate-y-1 hover:text-[var(--color-text-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]"
+      class="inline-flex min-h-11 min-w-11 cursor-pointer items-center justify-center rounded-sm text-secondary transition-colors duration-200 hover:text-[var(--color-text-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]"
       @click="toggleTheme"
     >
       <component
