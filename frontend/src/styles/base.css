@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..800&family=Manrope:wght@200..800&display=swap');
 
 *,
 *::before,
@@ -20,4 +19,9 @@ body,
 body {
   font-family: var(--font-body);
   background-color: var(--color-bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
 }

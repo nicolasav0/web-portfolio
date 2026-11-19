@@ -1,0 +1,8 @@
+# Nicolás Aguirre Velásquez
+
+Backend developer focused on Java, Spring Boot, REST APIs and PostgreSQL.
+
+- [Portafolio](https://nicolasav.com)
+- [GitHub](https://github.com/nicolasav0)
+- [LinkedIn](https://linkedin.com/in/nicolasav0)
+- [Email](mailto:niaguirrev@unal.edu.co)

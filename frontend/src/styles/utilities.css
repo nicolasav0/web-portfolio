@@ -26,6 +26,10 @@
   color: var(--color-brand);
 }
 
+.text-brand-text {
+  color: var(--color-brand-text);
+}
+
 /* ==========================================================================
    TYPOGRAPHY
    ========================================================================== */
@@ -100,4 +104,13 @@
 
 .transition-slow {
   transition: var(--transition-slow);
+}
+
+.transition-interactive {
+  transition:
+    color var(--transition-normal) var(--ease-standard),
+    background-color var(--transition-normal) var(--ease-standard),
+    border-color var(--transition-normal) var(--ease-standard),
+    box-shadow var(--transition-normal) var(--ease-standard),
+    transform var(--transition-normal) var(--ease-standard);
 }

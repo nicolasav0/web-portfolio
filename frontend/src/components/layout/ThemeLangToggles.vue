@@ -7,7 +7,7 @@ defineProps({
   compact: Boolean,
 })
 
-const { locale, setLocale } = useLocale()
+const { content, locale, setLocale } = useLocale()
 const { theme, toggleTheme } = useTheme()
 
 function toggleLocale() {
@@ -18,23 +18,28 @@ function toggleLocale() {
 <template>
   <div class="flex items-center" :class="compact ? 'gap-3' : 'gap-5'">
     <button
-      class="cursor-pointer font-medium uppercase tracking-[0.25em] transition-all duration-300 hover:-translate-y-1"
+      type="button"
+      :aria-label="content.sections.toggleLanguage"
+      :aria-pressed="locale === 'es'"
+      class="inline-flex min-h-11 min-w-11 cursor-pointer items-center justify-center rounded-sm px-2 font-medium uppercase tracking-[0.25em] text-secondary transition-colors duration-200 hover:text-[var(--color-text-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]"
       :class="compact ? 'text-[0.625rem]' : 'text-xs'"
-      :style="{ color: 'var(--color-text-secondary)' }"
       @click="toggleLocale"
     >
       {{ locale === 'en' ? 'EN' : 'ES' }}
     </button>
 
     <button
-      class="cursor-pointer transition-all duration-300 hover:-translate-y-1"
-      :style="{ color: 'var(--color-text-secondary)' }"
+      type="button"
+      :aria-label="content.sections.toggleTheme"
+      :aria-pressed="theme === 'dark'"
+      class="inline-flex min-h-11 min-w-11 cursor-pointer items-center justify-center rounded-sm text-secondary transition-colors duration-200 hover:text-[var(--color-text-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]"
       @click="toggleTheme"
     >
       <component
         :is="theme === 'dark' ? Sun : Moon"
         :size="compact ? 14 : 18"
         :stroke-width="1.75"
+        aria-hidden="true"
       />
     </button>
   </div>

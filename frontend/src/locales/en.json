@@ -37,9 +37,19 @@
   ],
   "contact": {
     "email": "niaguirrev@unal.edu.co",
-    "telegram": "https://t.me",
+    "emailLabel": "Email niaguirrev@unal.edu.co",
+    "emailHeading": "Email",
+    "copyEmail": "Copy email",
+    "copied": "Copied!",
+    "copyError": "Could not copy",
+    "cvHeading": "Resume",
+    "secondaryHeading": "Find me elsewhere",
+    "externalLinkLabel": "opens in a new tab",
+    "telegram": "https://t.me/nicolasav",
+    "telegramLabel": "Open Telegram in a new tab",
     "cv": {
       "label": "Download CV / Resume",
+      "ariaLabel": "Download CV / Resume as PDF",
       "path": "/resume.pdf",
       "graduation": "Expected graduation: 2028–2029"
     }
@@ -60,17 +70,24 @@
     "lastName": "Aguirre Velásquez",
     "fullName": "Nicolás Aguirre Velásquez",
     "role": "Backend Developer",
+    "availability": "Available for opportunities",
+    "ctaCv": "Download CV",
+    "ctaContact": "Let's talk",
     "tagline": "Building scalable backend applications.",
     "description": "Backend developer focused on building scalable applications with Java, Spring Boot and PostgreSQL.",
     "location": "Colombia",
     "email": "niaguirrev@unal.edu.co"
   },
   "socials": [
-    { "id": 1, "name": "GitHub", "icon": "github", "url": "https://github.com/niko2k7" },
-    { "id": 2, "name": "LinkedIn", "icon": "linkedin", "url": "https://linkedin.com/in/niko2k7" },
-    { "id": 3, "name": "Email", "icon": "mail", "url": "mailto:niaguirrev@unal.edu.co" },
-    { "id": 4, "name": "X", "icon": "x", "url": "https://x.com" },
-    { "id": 5, "name": "Telegram", "icon": "telegram", "url": "https://t.me" }
+    { "id": 1, "name": "Email", "icon": "mail", "url": "mailto:niaguirrev@unal.edu.co" },
+    { "id": 2, "name": "GitHub", "icon": "github", "url": "https://github.com/nicolasav0" },
+    {
+      "id": 3,
+      "name": "LinkedIn",
+      "icon": "linkedin",
+      "url": "https://linkedin.com/in/nicolasav0"
+    },
+    { "id": 4, "name": "Telegram", "icon": "telegram", "url": "https://t.me/nicolasav" }
   ],
   "sections": {
     "about": "About",
@@ -78,8 +95,19 @@
     "projects": "Projects",
     "contact": "Contact",
     "source": "Source",
+    "sourceAriaLabel": "View code for",
+    "sourceAriaSuffix": "on GitHub",
+    "demo": "Live demo",
+    "demoAriaLabel": "Open live demo for",
+    "featured": "Featured",
     "telegram": "Telegram",
     "menu": "Menu",
+    "navigation": "Navigation",
+    "skipToContent": "Skip to content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "toggleTheme": "Toggle theme",
+    "toggleLanguage": "Toggle language",
     "designedBy": "Designed & Built by",
     "builtWith": "Built with"
   }

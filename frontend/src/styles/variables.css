@@ -25,9 +25,10 @@
   --color-surface: #222037;
 
   --color-text-primary: #f5f5f7;
-  --color-text-secondary: #a3a0c2;
+  --color-text-secondary: #c4c1dc;
 
   --color-brand: #7c6cf5;
+  --color-brand-text: #b3a8ff;
 
   --color-border: #32304a;
 }
@@ -43,9 +44,10 @@
   --color-surface: #ffffff;
 
   --color-text-primary: #1a1a2e;
-  --color-text-secondary: #6b6b80;
+  --color-text-secondary: #4d4d62;
 
   --color-brand: #7c6cf5;
+  --color-brand-text: #4f3fc4;
 
   --color-border: #e2e2ea;
 }
@@ -141,6 +143,7 @@
   --transition-fast: 150ms;
   --transition-normal: 250ms;
   --transition-slow: 400ms;
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
 
   /* ==========================================================================
      Z-INDEX

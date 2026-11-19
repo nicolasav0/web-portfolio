@@ -1,32 +1,39 @@
 <script setup>
+import { computed } from 'vue'
 import { Menu } from 'lucide-vue-next'
+import IconButton from '@/components/ui/IconButton.vue'
 import { useActiveSection } from '@/composables/useActiveSection'
+import { useLocale } from '@/composables/useLocale'
 import ThemeLangToggles from './ThemeLangToggles.vue'
+
+defineProps({
+  open: Boolean,
+})
 
 const emit = defineEmits(['toggle-menu'])
 
 const { activeSection } = useActiveSection()
+const { content } = useLocale()
 
-function label(id) {
-  return id.charAt(0).toUpperCase() + id.slice(1)
-}
+const activeLabel = computed(
+  () => content.value.navigation.find((item) => item.target === activeSection.value)?.label ?? '',
+)
 </script>
 
 <template>
   <header class="mobile-topbar">
-    <button
-      class="flex cursor-pointer items-center gap-2"
-      :style="{ color: 'var(--color-text-secondary)' }"
+    <IconButton
+      :label="open ? content.sections.closeMenu : content.sections.openMenu"
+      aria-haspopup="dialog"
+      aria-controls="mobile-menu"
+      :aria-expanded="open"
       @click="emit('toggle-menu')"
     >
-      <Menu :size="18" :stroke-width="1.75" />
-    </button>
+      <Menu :size="18" :stroke-width="1.75" aria-hidden="true" />
+    </IconButton>
 
-    <span
-      class="text-xs font-medium uppercase tracking-[0.25em]"
-      :style="{ color: 'var(--color-brand)' }"
-    >
-      {{ label(activeSection) }}
+    <span class="text-xs font-medium uppercase tracking-[0.25em] text-brand-text">
+      {{ activeLabel }}
     </span>
 
     <div class="ml-auto">
