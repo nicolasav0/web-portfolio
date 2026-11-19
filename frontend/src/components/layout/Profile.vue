@@ -6,41 +6,27 @@ const { content } = useLocale()
 </script>
 
 <template>
-  <section class="flex flex-col gap-0">
+  <section class="flex flex-col gap-5">
     <img
       :src="profileImage"
       :alt="content.profile.fullName"
+      width="128"
+      height="128"
+      loading="eager"
+      decoding="async"
       class="h-32 w-32 rounded-full object-cover"
     />
 
     <div class="flex flex-col gap-2">
-      <h1
-        class="font-heading"
-        :style="{
-          fontSize: 'var(--text-heading-xl)',
-          fontWeight: 'var(--font-weight-bold)',
-          color: 'var(--color-text-primary)',
-        }"
-      >
+      <h1 class="font-heading text-[length:var(--text-heading-xl)] font-bold text-primary">
         {{ content.profile.fullName }}
       </h1>
 
-      <h2
-        :style="{
-          fontSize: 'var(--text-body-lg)',
-          fontWeight: 'var(--font-weight-medium)',
-          color: 'var(--color-brand)',
-        }"
-      >
+      <p class="text-[length:var(--text-body-lg)] font-medium text-brand-text">
         {{ content.profile.role }}
-      </h2>
+      </p>
 
-      <p
-        :style="{
-          color: 'var(--color-text-secondary)',
-          lineHeight: 'var(--line-height-relaxed)',
-        }"
-      >
+      <p class="leading-relaxed text-secondary">
         {{ content.profile.description }}
       </p>
     </div>

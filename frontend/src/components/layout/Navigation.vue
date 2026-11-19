@@ -10,36 +10,35 @@ const { scrollToSection } = useScrollToSection()
 </script>
 
 <template>
-  <nav>
+  <nav :aria-label="content.sections.navigation">
     <ul class="flex flex-col gap-3">
       <li v-for="item in content.navigation" :key="item.id">
-        <button
-          class="group flex cursor-pointer items-center gap-2"
-          @click="scrollToSection(item.target)"
+        <a
+          :href="`#${item.target}`"
+          :aria-current="activeSection === item.target ? 'location' : undefined"
+          class="group flex w-fit items-center gap-2 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--color-bg)]"
+          @click.prevent="scrollToSection(item.target)"
         >
           <span
             class="h-px transition-all duration-300"
-            :style="{
-              width: activeSection === item.target ? '5rem' : '2rem',
-              backgroundColor:
-                activeSection === item.target
-                  ? 'var(--color-text-primary)'
-                  : 'var(--color-text-secondary)',
-            }"
+            :class="
+              activeSection === item.target
+                ? 'w-20 bg-[var(--color-text-primary)]'
+                : 'w-8 bg-[var(--color-text-secondary)] group-hover:w-12 group-hover:bg-[var(--color-text-primary)]'
+            "
           />
 
           <span
-            class="font-heading text-xs uppercase tracking-[0.25em] transition-all duration-300"
-            :style="{
-              color:
-                activeSection === item.target
-                  ? 'var(--color-text-primary)'
-                  : 'var(--color-text-secondary)',
-            }"
+            class="font-heading text-xs uppercase tracking-[0.25em] transition-colors duration-300"
+            :class="
+              activeSection === item.target
+                ? 'text-primary'
+                : 'text-secondary group-hover:text-[var(--color-text-primary)]'
+            "
           >
             {{ item.label }}
           </span>
-        </button>
+        </a>
       </li>
     </ul>
   </nav>

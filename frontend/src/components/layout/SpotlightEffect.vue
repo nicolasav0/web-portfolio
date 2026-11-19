@@ -31,6 +31,7 @@ onUnmounted(() => {
 
 <template>
   <div
+    aria-hidden="true"
     class="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300"
     :class="isVisible ? 'opacity-100' : 'opacity-0'"
     :style="{

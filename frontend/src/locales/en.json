@@ -37,9 +37,12 @@
   ],
   "contact": {
     "email": "niaguirrev@unal.edu.co",
+    "emailLabel": "Email niaguirrev@unal.edu.co",
     "telegram": "https://t.me",
+    "telegramLabel": "Open Telegram in a new tab",
     "cv": {
       "label": "Download CV / Resume",
+      "ariaLabel": "Download CV / Resume as PDF",
       "path": "/resume.pdf",
       "graduation": "Expected graduation: 2028–2029"
     }
@@ -80,6 +83,12 @@
     "source": "Source",
     "telegram": "Telegram",
     "menu": "Menu",
+    "navigation": "Navigation",
+    "skipToContent": "Skip to content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "toggleTheme": "Toggle theme",
+    "toggleLanguage": "Toggle language",
     "designedBy": "Designed & Built by",
     "builtWith": "Built with"
   }

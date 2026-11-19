@@ -6,22 +6,20 @@ import ThemeLangToggles from './ThemeLangToggles.vue'
 </script>
 
 <template>
-  <aside
-    class="sidebar"
-    :style="{
-      width: 'var(--sidebar-width)',
-      backgroundColor: 'var(--color-bg)',
-      borderColor: 'var(--color-border)',
-    }"
-  >
-    <div class="flex flex-1 flex-col justify-between p-10">
+  <aside class="sidebar">
+    <div class="flex flex-1 flex-col gap-8 p-5 md:p-10 lg:justify-between">
       <Profile />
 
-      <Navigation />
+      <div class="hidden lg:block">
+        <Navigation />
+      </div>
 
       <div class="flex flex-col gap-4">
         <SocialLinks />
-        <ThemeLangToggles />
+
+        <div class="hidden lg:block">
+          <ThemeLangToggles />
+        </div>
       </div>
     </div>
   </aside>
@@ -31,15 +29,20 @@ import ThemeLangToggles from './ThemeLangToggles.vue'
 .sidebar {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  position: sticky;
-  top: 0;
-  align-self: flex-start;
+  width: 100%;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
 }
 
-@media (max-width: 1023px) {
+@media (min-width: 1024px) {
   .sidebar {
-    display: none;
+    width: var(--sidebar-width);
+    min-height: 100vh;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    border-right: 1px solid var(--color-border);
+    border-bottom: 0;
   }
 }
 </style>

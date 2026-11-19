@@ -28,6 +28,7 @@
   --color-text-secondary: #a3a0c2;
 
   --color-brand: #7c6cf5;
+  --color-brand-text: #b3a8ff;
 
   --color-border: #32304a;
 }
@@ -46,6 +47,7 @@
   --color-text-secondary: #6b6b80;
 
   --color-brand: #7c6cf5;
+  --color-brand-text: #4f3fc4;
 
   --color-border: #e2e2ea;
 }
