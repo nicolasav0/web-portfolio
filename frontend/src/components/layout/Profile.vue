@@ -3,7 +3,7 @@ import { ArrowRight, Download } from 'lucide-vue-next'
 import { useLocale } from '@/composables/useLocale'
 import { useScrollToSection } from '@/composables/useScrollToSection'
 import ThemeLangToggles from './ThemeLangToggles.vue'
-import profileImage from '@/assets/images/profile-placeholder.png'
+import profileImage from '@/assets/images/profile-placeholder.webp'
 
 const { content } = useLocale()
 const { scrollToSection } = useScrollToSection()
