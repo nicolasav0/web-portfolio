@@ -96,7 +96,7 @@ onBeforeUnmount(() => clearTimeout(copyTimeout))
             </div>
           </div>
 
-          <div class="flex shrink-0 items-center gap-2">
+          <div class="flex w-full min-w-0 items-center gap-2 sm:w-auto">
             <span
               class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-brand-text"
             >
@@ -106,7 +106,7 @@ onBeforeUnmount(() => clearTimeout(copyTimeout))
             <button
               type="button"
               :aria-label="copyLabel"
-              class="inline-flex w-full shrink-0 items-center justify-center gap-2 rounded-md border border-primary bg-primary px-4 py-2 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--color-brand)] hover:text-[var(--color-brand-text)] focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-surface)] focus-visible:outline-none sm:w-auto sm:min-w-[9rem]"
+              class="inline-flex min-h-11 min-w-0 flex-1 items-center justify-center gap-2 rounded-md border border-primary bg-primary px-3 py-2 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--color-brand)] hover:text-[var(--color-brand-text)] focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-surface)] focus-visible:outline-none sm:flex-none sm:w-auto sm:min-w-[9rem]"
               :class="copyState === 'copied' ? 'text-brand-text' : 'text-secondary'"
               @click="copyEmail"
             >
