@@ -1,9 +1,11 @@
 import { ref, computed, watch } from 'vue'
 import en from '@/locales/en.json'
 import es from '@/locales/es.json'
+import fr from '@/locales/fr.json'
 
-const locale = ref(localStorage.getItem('locale') || 'es')
-const data = { en, es }
+const data = { en, es, fr }
+const savedLocale = localStorage.getItem('locale')
+const locale = ref(Object.hasOwn(data, savedLocale) ? savedLocale : 'es')
 const content = computed(() => data[locale.value])
 
 const seo = {
@@ -16,6 +18,11 @@ const seo = {
     title: 'Nicolás Aguirre Velásquez | Backend Developer',
     description:
       'Portfolio of Nicolás Aguirre Velásquez, a backend developer specialized in Java and Spring Boot.',
+  },
+  fr: {
+    title: 'Nicolás Aguirre Velásquez | Développeur backend',
+    description:
+      'Portfolio de Nicolás Aguirre Velásquez, développeur backend spécialisé en Java et Spring Boot.',
   },
 }
 
