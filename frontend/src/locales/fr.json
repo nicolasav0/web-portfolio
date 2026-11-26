@@ -1,0 +1,117 @@
+{
+  "about": {
+    "paragraphs": [
+      "Je suis étudiant en génie des systèmes et de l'informatique à l'Universidad Nacional de Colombia, à Bogotá, où je suis actuellement au sixième semestre. Je parle espagnol et anglais, et j'apprends le français. En dehors de la programmation, je pratique l'haltérophilie et j'aime créer et apprendre chaque jour.",
+      "Je me concentre principalement sur le développement back-end avec Java et Spring Boot. Je crée des API REST et des systèmes qui répondent à des problèmes concrets. Je développe mes compétences en Spring Security, JWT, Docker et CI/CD, et je complète mes projets back-end avec des développements front-end simples en Vue.js. Je recherche activement un stage pour continuer à progresser en tant que développeur et apporter ma contribution à une équipe. Je prévois d'obtenir mon diplôme en 2028–2029."
+    ]
+  },
+  "skills": [
+    {
+      "category": "Langages de programmation",
+      "items": ["Java", "SQL", "JavaScript", "Kotlin (en cours d'apprentissage)"]
+    },
+    { "category": "Back-end", "items": ["Spring Boot", "Spring Security", "JWT", "OAuth2"] },
+    { "category": "Front-end", "items": ["Vue.js", "Pinia", "Axios", "Vite"] },
+    { "category": "Bases de données", "items": ["PostgreSQL", "MySQL"] },
+    {
+      "category": "DevOps et outils",
+      "items": ["Docker", "Git", "GitHub Actions", "CI/CD (en cours d'apprentissage)"]
+    },
+    { "category": "Méthodologies", "items": ["Scrum", "Kanban"] },
+    {
+      "category": "Compétences comportementales",
+      "items": [
+        "Résolution de problèmes",
+        "Apprentissage autonome",
+        "Esprit d'analyse",
+        "Collaboration en équipe",
+        "Adaptabilité"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "ParKing",
+      "description": "API REST de gestion de parkings. Cette solution complète comprend une authentification JWT, un parking configurable sous forme de grille de cases, la gestion des entrées et sorties des véhicules, le calcul automatique des tarifs et des remises, la génération de factures et des rapports financiers. L'architecture en couches repose sur Spring Boot et PostgreSQL.",
+      "technologies": ["Java", "Spring Boot", "PostgreSQL", "Docker", "JWT"],
+      "github": "https://github.com/UNosProgramadores/project-backend"
+    }
+  ],
+  "contact": {
+    "email": "niaguirrev@unal.edu.co",
+    "emailLabel": "Envoyer un e-mail à niaguirrev@unal.edu.co",
+    "emailHeading": "E-mail",
+    "copyEmail": "Copier l'adresse e-mail",
+    "copied": "Copié !",
+    "copyError": "La copie a échoué",
+    "cvHeading": "CV",
+    "secondaryHeading": "Me suivre sur d'autres plateformes",
+    "externalLinkLabel": "s'ouvre dans un nouvel onglet",
+    "telegram": "https://t.me/nicolasav",
+    "telegramLabel": "Ouvrir Telegram dans un nouvel onglet",
+    "cv": {
+      "label": "Télécharger mon CV",
+      "ariaLabel": "Télécharger mon CV au format PDF",
+      "path": "/resume.pdf",
+      "graduation": "Diplôme prévu : 2028–2029"
+    }
+  },
+  "footer": {
+    "author": "Nicolás Aguirre Velásquez",
+    "githubUrl": "https://github.com/nicolasav0/web-portfolio",
+    "technologies": ["Vue 3", "Tailwind CSS"]
+  },
+  "navigation": [
+    { "id": 1, "label": "À propos", "target": "about" },
+    { "id": 2, "label": "Compétences", "target": "skills" },
+    { "id": 3, "label": "Projets", "target": "projects" },
+    { "id": 4, "label": "Contact", "target": "contact" }
+  ],
+  "profile": {
+    "firstName": "Nicolás",
+    "lastName": "Aguirre Velásquez",
+    "fullName": "Nicolás Aguirre Velásquez",
+    "role": "Développeur back-end",
+    "availability": "Disponible pour de nouvelles opportunités",
+    "ctaCv": "Télécharger mon CV",
+    "ctaContact": "Parlons-en",
+    "tagline": "Je développe des applications back-end évolutives.",
+    "description": "Développeur back-end, je crée des applications évolutives avec Java, Spring Boot et PostgreSQL.",
+    "location": "Colombie",
+    "email": "niaguirrev@unal.edu.co"
+  },
+  "socials": [
+    { "id": 1, "name": "E-mail", "icon": "mail", "url": "mailto:niaguirrev@unal.edu.co" },
+    { "id": 2, "name": "GitHub", "icon": "github", "url": "https://github.com/nicolasav0" },
+    {
+      "id": 3,
+      "name": "LinkedIn",
+      "icon": "linkedin",
+      "url": "https://linkedin.com/in/nicolasav0"
+    },
+    { "id": 4, "name": "Telegram", "icon": "telegram", "url": "https://t.me/nicolasav" }
+  ],
+  "sections": {
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact",
+    "source": "Code source",
+    "sourceAriaLabel": "Voir le code de",
+    "sourceAriaSuffix": "sur GitHub",
+    "demo": "Démo en ligne",
+    "demoAriaLabel": "Ouvrir la démo en ligne de",
+    "featured": "Projet vedette",
+    "telegram": "Telegram",
+    "menu": "Menu",
+    "navigation": "Navigation",
+    "skipToContent": "Aller au contenu",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "toggleTheme": "Changer de thème",
+    "toggleLanguage": "Changer de langue",
+    "designedBy": "Conçu et développé par",
+    "builtWith": "Réalisé avec"
+  }
+}
